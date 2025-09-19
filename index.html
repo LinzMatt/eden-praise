@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Praise - Spreading Hope Through Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Global Music Player -->
+    <div class="global-player">
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+            <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+        </div>
+        <div class="now-playing">Now Playing: <span id="current-track">Hope Rising - Eden Praise</span></div>
+        <button class="open-player-btn" id="open-player-btn"><i class="fas fa-chevron-up"></i></button>
+    </div>
+
+    <!-- Full Music Player -->
+    <div class="full-music-player" id="full-player">
+        <div class="full-player-header">
+            <div class="now-playing">Now Playing: <span id="full-current-track">Hope Rising - Eden Praise</span></div>
+            <button class="close-player" id="close-player-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="full-player-controls">
+            <button id="full-prev-btn"><i class="fas fa-step-backward"></i></button>
+            <button class="play-pause" id="full-play-pause-btn"><i class="fas fa-play"></i></button>
+            <button id="full-next-btn"><i class="fas fa-step-forward"></i></button>
+        </div>
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="player-time">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Eden<span>Praise</span></a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#members">Members</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carousel Banner -->
+    <div class="carousel-banner">
+        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+            <div class="carousel-content">
+                <h2>New Single: Hope Rising</h2>
+                <p>Our newest single is coming next month! Pre-save now and be the first to hear it.</p>
+                <a href="#music" class="btn">Pre-save Now</a>
+            </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+            <div class="carousel-content">
+                <h2>Today's Word of Hope</h2>
+                <p>"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11</p>
+                <a href="#daily-message" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+            <div class="carousel-content">
+                <h2>Upcoming Live Performance</h2>
+                <p>Join us for a special live performance at City Hall on December 15th. Free admission!</p>
+                <a href="#events" class="btn">Event Details</a>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-control" id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-control" id="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="carousel-indicators">
+            <div class="carousel-indicator active" data-slide="0"></div>
+            <div class="carousel-indicator" data-slide="1"></div>
+            <div class="carousel-indicator" data-slide="2"></div>
+        </div>
+        <div class="scroll-down">Scroll down <i class="fas fa-arrow-down"></i></div>
+    </div>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>Eden Praise was formed with a singular mission: to spread God's message of hope and love through the universal language of music. Our first album "World of Hope" encapsulates our vision to bring people closer to God through uplifting lyrics and inspiring melodies.</p>
+                    <p>We believe in the transformative power of music to heal, comfort, and inspire. Each song we create is a prayer set to melody, designed to touch hearts and transform lives.</p>
+                    <p>Though we are seven individuals from different walks of life, we are united by our faith and passion for sharing God's love through our musical talents.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eden Praise Band">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Music</h2>
+                <p>Discover our inspirational songs and albums</p>
+            </div>
+            
+            <div class="music-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="album">Albums</button>
+                <button class="filter-btn" data-filter="single">Singles</button>
+                <button class="filter-btn" data-filter="live">Live</button>
+            </div>
+            
+            <div class="music-grid">
+                <div class="music-card" data-category="single">
+                    <div class="music-image">
+                        <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hope Rising">
+                        <div class="play-overlay">
+                            <div class="play-btn" data-music="hope-rising">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>Hope Rising</h3>
+                        <p>Single • 2023</p>
+                        <a href="#" class="see-more-btn" data-music-modal="hope-rising">See More</a>
+                    </div>
+                </div>
+                
+                <div class="music-card" data-category="album">
+                    <div class="music-image">
+                        <img src="https://images.unsplash.com/photo-1511370235399-1802c6d5e5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="World of Hope">
+                        <div class="play-overlay">
+                            <div class="play-btn" data-music="world-of-hope">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>World of Hope</h3>
+                        <p>Album • 2022</p>
+                        <a href="#" class="see-more-btn" data-music-modal="world-of-hope">See More</a>
+                    </div>
+                </div>
+                
+                <div class="music-card" data-category="single">
+                    <div class="music-image">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grace Abounds">
+                        <div class="play-overlay">
+                            <div class="play-btn" data-music="grace-abounds">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>Grace Abounds</h3>
+                        <p>Single • 2022</p>
+                        <a href="#" class="see-more-btn" data-music-modal="grace-abounds">See More</a>
+                    </div>
+                </div>
+                
+                <div class="music-card" data-category="live">
+                    <div class="music-image">
+                        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Live at City Hall">
+                        <div class="play-overlay">
+                            <div class="play-btn" data-music="live-performance">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>Live at City Hall</h3>
+                        <p>Live • 2022</p>
+                        <a href="#" class="see-more-btn" data-music-modal="live-performance">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Detail Modal -->
+    <div class="music-modal" id="music-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-music-modal"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-header">
+                <div class="modal-album-cover">
+                    <img src="" alt="" id="modal-cover">
+                </div>
+                <div class="modal-music-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-info"></p>
+                    <div class="download-options">
+                        <a href="#" class="download-btn"><i class="fab fa-spotify"></i> Spotify</a>
+                        <a href="#" class="download-btn"><i class="fab fa-apple"></i> Apple Music</a>
+                        <a href="#" class="download-btn"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#" class="download-btn"><i class="fas fa-download"></i> Download MP3</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-player">
+                <audio id="modal-audio" controls style="width: 100%">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+            <div class="lyrics-section">
+                <h3>Lyrics</h3>
+                <div class="lyrics-content" id="modal-lyrics"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other sections from the previous version would follow here -->
+    <!-- About, Daily Message, Members, Projects, Gallery, Support, Contact sections -->
+    <!-- Daily Message Section -->
+    <section class="daily-message">
+        <div class="container">
+            <div class="section-title">
+                <h2>Daily Message</h2>
+            </div>
+            <div class="message-box">
+                <h3>Today's Word of Hope</h3>
+                <div class="message-content">
+                    <p>"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11</p>
+                    <p>No matter what challenges you're facing today, remember that God has a plan for your life. His plans are always for your good, even when you can't see the bigger picture. Trust in His timing and have faith that He is working things out for your benefit.</p>
+                </div>
+                <a href="#" class="btn">Share Your Thoughts</a>
+                
+                <div class="comments-section">
+                    <h4>Fan Comments</h4>
+                    <div class="comment">
+                        <p><strong>Sarah M.:</strong> This message came at the perfect time. Thank you for the encouragement!</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Michael T.:</strong> Your music and messages have been a blessing to my family. Keep up the great work!</p>
+                    </div>
+                    
+                    <h4>Add Your Comment</h4>
+                    <form class="comment-form">
+                        <textarea placeholder="Share your thoughts..."></textarea>
+                        <button type="submit" class="btn">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Eden Praise</h3>
+                    <p>Spreading hope, love, and faith through inspirational music.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Eden Praise. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
