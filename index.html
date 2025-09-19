@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <script>
+    // Remplacez par votre adresse IP
+    const yourIp = "109.132.177.188";
+    
+    // Fonction pour obtenir l'IP du visiteur (via une API externe)
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.ip !== yourIp) {
+                // Rediriger vers la page de maintenance
+                window.location.href = "/maintenance.html";
+            }
+        })
+        .catch(error => {
+            console.error("Erreur de détection IP:", error);
+            // En cas d'erreur, on laisse passer (ou rediriger si vous préférez)
+        });
+    </script>
+
     <!-- Global Music Player -->
     <div class="global-player">
         <div class="player-controls">
